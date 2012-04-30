@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -10102,9 +10102,12 @@ Grid 5.08 mm&lt;p&gt;
 <instance part="C4" gate="G$1" x="-58.42" y="78.74"/>
 <instance part="P+5" gate="1" x="-58.42" y="88.9"/>
 <instance part="GND9" gate="1" x="-58.42" y="71.12"/>
-<instance part="Q1" gate="G$1" x="-48.26" y="19.685" rot="R270"/>
-<instance part="C5" gate="G$1" x="-53.34" y="25.4" rot="R270"/>
-<instance part="C6" gate="G$1" x="-53.34" y="15.24" rot="R270"/>
+<instance part="Q1" gate="G$1" x="-48.26" y="20.32" smashed="yes" rot="R270">
+<attribute name="NAME" x="-47.244" y="25.4" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-53.34" y="16.51" size="1.778" layer="96"/>
+</instance>
+<instance part="C5" gate="G$1" x="-57.15" y="25.4" rot="R270"/>
+<instance part="C6" gate="G$1" x="-57.15" y="15.24" rot="R270"/>
 <instance part="GND11" gate="1" x="-45.72" y="-8.89"/>
 <instance part="RESET" gate="1" x="30.48" y="71.12" smashed="yes" rot="MR270">
 <attribute name="NAME" x="35.56" y="77.47" size="1.778" layer="95" rot="MR0"/>
@@ -10130,7 +10133,7 @@ Grid 5.08 mm&lt;p&gt;
 <instance part="C3" gate="G$1" x="-71.12" y="78.74"/>
 <instance part="P+1" gate="1" x="-71.12" y="88.9"/>
 <instance part="GND1" gate="1" x="-71.12" y="71.12"/>
-<instance part="GND10" gate="1" x="-58.42" y="15.24"/>
+<instance part="GND10" gate="1" x="-60.96" y="31.75" rot="R180"/>
 <instance part="X1" gate="-1" x="-60.96" y="129.54"/>
 <instance part="X1" gate="-2" x="-60.96" y="124.46"/>
 <instance part="GND14" gate="1" x="-48.26" y="124.46" rot="R90"/>
@@ -10230,11 +10233,11 @@ Grid 5.08 mm&lt;p&gt;
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="-58.42" y1="17.78" x2="-58.42" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="25.4" x2="-55.88" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="20.32" x2="-55.88" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-58.42" y1="20.32" x2="-55.88" y2="20.32" width="0.1524" layer="91"/>
-<junction x="-55.88" y="20.32"/>
+<wire x1="-60.96" y1="29.21" x2="-60.96" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-59.69" y1="25.4" x2="-60.96" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="25.4" x2="-60.96" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="15.24" x2="-59.69" y2="15.24" width="0.1524" layer="91"/>
+<junction x="-60.96" y="25.4"/>
 <pinref part="GND10" gate="1" pin="GND"/>
 <pinref part="C5" gate="G$1" pin="2"/>
 <pinref part="C6" gate="G$1" pin="2"/>
@@ -10350,23 +10353,25 @@ Grid 5.08 mm&lt;p&gt;
 <net name="N$1" class="0">
 <segment>
 <wire x1="-30.48" y1="25.4" x2="-48.26" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="25.4" x2="-48.26" y2="22.225" width="0.1524" layer="91"/>
-<junction x="-48.26" y="25.4"/>
 <pinref part="18F4550" gate="G$1" pin="OSC1/CLKI"/>
-<pinref part="Q1" gate="G$1" pin="1"/>
 <pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="Q1" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="25.4" x2="-52.07" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="22.86" x2="-48.26" y2="25.4" width="0.1524" layer="91"/>
+<junction x="-48.26" y="25.4"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<wire x1="-48.26" y1="17.145" x2="-48.26" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-52.07" y1="15.24" x2="-48.26" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="15.24" x2="-45.085" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-45.085" y1="15.24" x2="-45.085" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-45.085" y1="22.86" x2="-30.48" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-48.26" y="15.24"/>
-<pinref part="Q1" gate="G$1" pin="2"/>
 <pinref part="18F4550" gate="G$1" pin="RA6/OSC2/CLKO"/>
 <pinref part="C6" gate="G$1" pin="1"/>
+<pinref part="Q1" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="17.78" x2="-48.26" y2="15.24" width="0.1524" layer="91"/>
+<junction x="-48.26" y="15.24"/>
 </segment>
 </net>
 <net name="RESET" class="0">
