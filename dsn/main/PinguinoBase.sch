@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -8468,60 +8468,6 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="aasanchez">
-<packages>
-<package name="TL3XYO">
-<description>&lt;b&gt;TINY SWITCH&lt;/b&gt;&lt;p&gt;
-Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da-01-de-Subminiaturschalter_TL_36YO.pdf</description>
-<wire x1="6.35" y1="-2.54" x2="6.35" y2="2.54" width="0.2032" layer="21"/>
-<wire x1="-6.35" y1="-2.54" x2="6.35" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="-6.35" y1="-2.54" x2="-6.35" y2="2.54" width="0.2032" layer="21"/>
-<wire x1="6.35" y1="2.54" x2="-6.35" y2="2.54" width="0.2032" layer="21"/>
-<pad name="1" x="-3.175" y="-3.81" drill="1.1" diameter="1.4224" shape="long" rot="R270"/>
-<pad name="2" x="0" y="-3.81" drill="1.1" diameter="1.4224" shape="long" rot="R270"/>
-<pad name="3" x="3.175" y="-3.81" drill="1.1" diameter="1.4224" shape="long" rot="R270"/>
-<pad name="M1" x="-6.35" y="-3.81" drill="1.2" diameter="2.1844" rot="R270"/>
-<pad name="M2" x="6.35" y="-3.81" drill="1.2" diameter="2.1844" rot="R270"/>
-<text x="3.81" y="-6.35" size="1.778" layer="27" rot="R180">&gt;VALUE</text>
-<rectangle x1="-1.27" y1="2.54" x2="1.27" y2="6.35" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="ON-OFF-ON">
-<wire x1="0" y1="-3.175" x2="0" y2="3.302" width="0.254" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="3.175" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-2.54" y2="3.175" width="0.254" layer="94"/>
-<text x="5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
-<text x="7.62" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
-<pin name="P" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
-<pin name="S" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="O" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TL39YO" prefix="S">
-<description>&lt;b&gt;TINY SWITCH&lt;/b&gt; ON OFF ON&lt;p&gt;
-Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da-01-de-Subminiaturschalter_TL_36YO.pdf</description>
-<gates>
-<gate name="BEF1" symbol="ON-OFF-ON" x="0" y="0"/>
-</gates>
-<devices>
-<device name="SWITCH_2_ESTADOS" package="TL3XYO">
-<connects>
-<connect gate="BEF1" pin="O" pad="1"/>
-<connect gate="BEF1" pin="P" pad="2"/>
-<connect gate="BEF1" pin="S" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="jack">
 <packages>
 <package name="DCJ0303">
@@ -8728,11 +8674,9 @@ Grid 5.08 mm&lt;p&gt;
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="R2" library="resistor" deviceset="R-US_" device="0207/7" value="470"/>
 <part name="RUN" library="led" deviceset="LED" device="3MM" value="green"/>
-<part name="GND13" library="SparkFun" deviceset="GND" device=""/>
 <part name="C8" library="SparkFun" deviceset="CAP_POL" device="PTH2" value="0.22uf/50v"/>
 <part name="LOGO1" library="OSHW" deviceset="OSHW_LOGO_FILL" device="X0200-NT"/>
 <part name="JP2" library="SparkFun" deviceset="M06" device="LONGPADS" value=" "/>
-<part name="S1" library="aasanchez" deviceset="TL39YO" device="SWITCH_2_ESTADOS" value=""/>
 <part name="C2" library="SparkFun" deviceset="CAP" device="PTH2" value="0.1uf"/>
 <part name="JP3" library="SparkFun" deviceset="M08" device="LONGPADS" value=" "/>
 <part name="JP4" library="SparkFun" deviceset="M08" device="LONGPADS" value=" "/>
@@ -10093,7 +10037,7 @@ Grid 5.08 mm&lt;p&gt;
 <instance part="U$1" gate="G$1" x="48.26" y="111.76"/>
 <instance part="GND6" gate="1" x="53.34" y="99.06"/>
 <instance part="JP1" gate="G$1" x="15.24" y="127" rot="MR270"/>
-<instance part="P+2" gate="1" x="20.32" y="96.52" rot="R180"/>
+<instance part="P+2" gate="1" x="15.24" y="106.68" rot="R180"/>
 <instance part="18F4550" gate="G$1" x="5.08" y="30.48"/>
 <instance part="P+3" gate="1" x="-38.1" y="30.48" rot="R90"/>
 <instance part="P+4" gate="1" x="62.23" y="33.02" rot="R180"/>
@@ -10120,11 +10064,9 @@ Grid 5.08 mm&lt;p&gt;
 <instance part="P+7" gate="1" x="-48.26" y="73.66"/>
 <instance part="R2" gate="G$1" x="-48.26" y="53.34" rot="R90"/>
 <instance part="RUN" gate="G$1" x="-48.26" y="66.04"/>
-<instance part="GND13" gate="1" x="27.94" y="106.68"/>
 <instance part="C8" gate="G$1" x="-45.72" y="3.81"/>
 <instance part="LOGO1" gate="G$1" x="30.48" y="-2.54"/>
 <instance part="JP2" gate="G$1" x="-20.32" y="81.28" rot="R180"/>
-<instance part="S1" gate="BEF1" x="20.32" y="106.68"/>
 <instance part="C2" gate="G$1" x="0" y="109.22"/>
 <instance part="JP3" gate="G$1" x="-81.28" y="48.26" rot="MR180"/>
 <instance part="JP4" gate="G$1" x="-81.28" y="17.78" rot="MR180"/>
@@ -10187,12 +10129,6 @@ Grid 5.08 mm&lt;p&gt;
 <pinref part="C10" gate="G$1" pin="-"/>
 <pinref part="RESET" gate="1" pin="S1"/>
 <junction x="20.32" y="68.58"/>
-</segment>
-<segment>
-<wire x1="22.86" y1="111.76" x2="27.94" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="111.76" x2="27.94" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="GND13" gate="1" pin="GND"/>
-<pinref part="S1" gate="BEF1" pin="S"/>
 </segment>
 <segment>
 <wire x1="-45.72" y1="-1.27" x2="-45.72" y2="-6.35" width="0.1524" layer="91"/>
@@ -10299,11 +10235,6 @@ Grid 5.08 mm&lt;p&gt;
 <pinref part="JP2" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<wire x1="20.32" y1="101.6" x2="20.32" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="S1" gate="BEF1" pin="P"/>
-<pinref part="P+2" gate="1" pin="+5V"/>
-</segment>
-<segment>
 <wire x1="-48.26" y1="68.58" x2="-48.26" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="RUN" gate="G$1" pin="A"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
@@ -10318,6 +10249,11 @@ Grid 5.08 mm&lt;p&gt;
 <wire x1="-71.12" y1="83.82" x2="-71.12" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
 <pinref part="C3" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="15.24" y1="109.22" x2="15.24" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="P+2" gate="1" pin="+5V"/>
 </segment>
 </net>
 <net name="D+" class="0">
@@ -10850,14 +10786,6 @@ Grid 5.08 mm&lt;p&gt;
 <wire x1="17.78" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="VBUS"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<wire x1="17.78" y1="111.76" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="111.76" x2="15.24" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="2"/>
-<pinref part="S1" gate="BEF1" pin="O"/>
 </segment>
 </net>
 <net name="N$7" class="0">
