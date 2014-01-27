@@ -11,6 +11,3 @@ Existen 2 versiones del Booloader 100% compatibles con el Diseño de PinguinoBas
 Se puede utilizar tanto en 18F2550 y 18F4550.
 ## Versión 4:
 Se escribe con SDCC ( > 3.0.0 ) , con un tamaño alrededor de 3Kb
-
-
-
